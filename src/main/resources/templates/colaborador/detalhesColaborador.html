@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<title>Colaboradores</title>
+	 
+	<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+</head>
+<body>
+	
+	<h3><a href="/colaboradores" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Lista de Colaborador</a></h3>
+	
+	<div th:each="colaborador : ${colaborador}" class="container detalhesColaborador">
+	
+	<h5>Colaborador</h5>
+		<div class="row">
+		
+		
+			<p>Nome: <span th:text="${colaborador.nome}"></span></p>
+			<p>Area: <span th:text="${colaborador.area}"></span></p>
+			<p>Gestor: <span th:text="${colaborador.gestor}"></span></p>
+			<p>Motivo: <span th:text="${colaborador.motivo}"></span></p>		
+		</div>	
+	</div>
+	
+	
+	
+	
+		<table class="container tabelaAvaliacao">
+		<thead>
+			<tr>
+				<th>Avaliação</th>
+				<th>Data</th>
+				<th>Motivo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each= "avaliacao : ${avaliacaos}">
+			<td><span th:text="${avaliacao.abordagem}"></span></td>
+			
+			</tr>		
+		</tbody>		
+	</table>
+	
+	
+	
+	<h3><a href="/conhecimentos" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Feedback</a></h3>
+
+
+
+
+<!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+</body>
+</html>

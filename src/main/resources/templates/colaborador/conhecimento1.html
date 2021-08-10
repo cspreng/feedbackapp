@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>EventosApp</title>
+	 <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="style/styleCss.css"/>
+      
+</head>
+<body>
+	
+	<header>
+		<nav>
+    		<div class="nav-wrapper">
+      			<a href="#" class="brand-logo">Avaliacao</a>
+      			<ul id="nav-mobile" class="right hide-on-med-and-down">
+        			<li><a href="/cadastrarEvento" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Lista de Eventos</a></li>
+        		</ul>
+    		</div>
+ 	 	</nav>
+	
+	</header>
+	
+	
+	<div  class="container formAvaliacao">
+	
+		<form method="post" th:object="${avaliacao}">
+			Abordagem ao cliente: <input type="text" value="" name="abordagem" placeholder="Nota de 0 a 5"/>
+			Tecnica de Venda: <input type="text" value="" name="venda" placeholder="Nota de 0 a 5"/>
+			Tecnologia Maquinas em Geral: <input type="text" value="" name="tecnologia" placeholder="Nota de 0 a 5"/>
+			Sistema Interno: <input type="text" value="" name="sistema" placeholder="Nota de 0 a 5"/>
+			<button class="waves-effect waves-light btn" type="submit">Adicionar</button>
+		</form>
+	</div>
+	
+	<table class="container tabelaAvaliacao">
+		<thead>
+			<tr>
+				<th>Avaliação</th>
+				<th>Data</th>
+				<th>Motivo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each= "avaliacao : ${avaliacaos}">
+			<td><span th:text="${avaliacao.abordagem}"></span></td>
+			
+			</tr>		
+		</tbody>		
+	</table>
+	
+	
+	
+	
+	
+	
+
+
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+
+
+</html>

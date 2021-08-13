@@ -19,7 +19,7 @@
 	<header>
 		<nav>
     		<div class="nav-wrapper">
-      			<a href="#" class="brand-logo">Avaliacao</a>
+      			<a href="#" class="brand-logo">Conhecimentos</a>
       			<ul id="nav-mobile" class="right hide-on-med-and-down">
         			<li><a href="/cadastrarEvento" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Lista de Eventos</a></li>
         		</ul>
@@ -37,22 +37,16 @@
 			Tecnologia Maquinas em Geral: <input type="text" value="" name="tecnologia" placeholder="Nota de 0 a 5"/>
 			Sistema Interno: <input type="text" value="" name="sistema" placeholder="Nota de 0 a 5"/>
 			<button class="waves-effect waves-light btn" type="submit">Adicionar</button>
+			
 		</form>
 	</div>
 	
 	<table class="container tabelaAvaliacao">
 		<thead>
-			<tr>
-				<th>Avaliação</th>
-				<th>Data</th>
-				<th>Motivo</th>
-			</tr>
-		</thead>
-		<tbody>
 			<tr th:each= "avaliacao : ${avaliacaos}">
-			<td><span th:text="${avaliacao.abordagem}"></span></td>
+			<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('CC#habilidades').arg(0, avaliacao.codigo)).build()}"><i class="material-icons left"></i>Conhecimentos</a></td>
 			
-			</tr>		
+			</tr>			
 		</tbody>		
 	</table>
 	

@@ -11,24 +11,37 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
 <body>
-
-	<h5>Cadastro Colaborador</h5>
-	<form class= "container" method="post">
-		Nome: <input type="text" value= "" name="nome"/>
-		<div class= "row">
-			<div class= "input-field col s4">
-				Gestor: <input type="text" value= "" name="gestor"/>
-			</div>
-			<div class= "input-field col s3">
-				Area: <input type="text" value= "" name="area"/>
-			</div>
-			<div class= "input-field col s3">
-				Motivo: <input type="text" value= "" name="motivo"/>
+	<header>
+		<nav class="menu">
+		    <div class="nav-wrapper">
+		      <a href="#" class="brand-logo">Cadastrar Colaborador</a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="/colaboradores" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de colaboradores</a></li>
+		      </ul>
+		    </div>
+		</nav>
+	
+	</header>
+	
+	<div class="container cadastroColaborador">
+	
+		<form class= "container" method="post">
+			Nome: <input type="text" value= "" name="nome"/>
+				<div class= "row">
+				<div class= "input-field col s4">
+					Gestor: <input type="text" value= "" name="gestor"/>
 				</div>
-			<div class= "input-field col s3">
-				Data: <input type="date" value= "" name="data"/>
-			</div>
+				<div class= "input-field col s3">
+					Area: <input type="text" value= "" name="area"/>
+				</div>
+				<div class= "input-field col s3">
+					Cargo: <input type="text" value= "" name="cargo"/>
+				</div>
+				<div class= "input-field col s3">
+					Data: <input type="date" value= "" name="data"/>
+				</div>
 		
 		</div>
 		
@@ -37,14 +50,14 @@
 		<h3><a href= "/" class="waves-effect waves-light btn"><i class="material-icons left">backspace</i>Voltar</a></h3>
 	
 	
-	</form>
+		</form>
 
-
-	 <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	</div>
+	 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 
-</head>
+
 
 
 </html>

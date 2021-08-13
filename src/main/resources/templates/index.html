@@ -1,7 +1,21 @@
-<html>
+<ul class="nav nav-pills">
+  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+</ul>
 
-<body>
-
-<h3>Ola Mundo</h3>
-</body>
-</html>
+<div id='content' class="tab-content">
+    <div class="tab-pane active" id="home">
+        Nome: <input/><br/>
+        <button class="next">Próximo</button>
+    </div>
+    <div class="tab-pane" id="profile">
+        CPF: <input/><br/>
+        <button class="prev">Anterior</button>
+        <button class="next">Próximo</button>
+    </div>
+    <div class="tab-pane" id="messages">
+        <button class="prev">Anterior</button>
+        <button class="save">Salvar</button>
+    </div>
+</div>

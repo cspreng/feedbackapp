@@ -37,10 +37,39 @@
 			<p>Data Admissao: <span th:text="${colaborador.data}"></span></p>		
 		</div>	
 	</div>	
+			
+		<div class="container avaliacao">
+		<form method="post" th:object="${avaliacao}">
+			Data: <input type="date" value="" name="datafeddback"/>
+			Motivo: <input type="text" value="" name="motivo"/>
+			<button class="waves-effect waves-light btn" type="submit">Adicionar</button>
+			
+		</form>
+		</div>
+	
+	
+	<table class="container tabelaAvaliacao">
+		<thead>
+			<tr>
+				
+				<th>Data</th>
+				<th>Motivo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="avaliacao : ${avaliacaos}">
+				<td><span th:text="${avaliacao.datafeddback}"></span></td>
+				<td><span th:text="${avaliacao.motivo}"></span></td>
+				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('CC#conhecimentos').arg(0, avaliacao.codigo)).build()}"><i class="material-icons left"></i>Conhecimentos</a></td>
+				
+			</tr>
+		</tbody>
+	</table>
+	
 	
 	
 	<!-- <h3><a href="${(#mvc.url('CC#feedback').arg(0, colaborador.codigo)).build()}" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Feedback</a></h3> -->
-	<h3><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('CC#feedback').arg(0, colaborador.codigo)).build()}"><i class="material-icons left"></i>Feedback</a></h3>
+	<!-- <h3><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('CC#conhecimentos').arg(0, avaliacao.codigo)).build()}"><i class="material-icons left">Feedback</i></a></h3>-->
 
 
 

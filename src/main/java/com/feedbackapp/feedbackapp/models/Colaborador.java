@@ -23,7 +23,7 @@ public class Colaborador implements Serializable {
 	
 	private String area;
 	
-	private String motivo;
+	private String cargo;
 	
 	private String data;
 	
@@ -62,20 +62,29 @@ public class Colaborador implements Serializable {
 		this.area = area;
 	}
 
-	public String getMotivo() {
-		return motivo;
-	}
-
-	public void setMotivo(String motivo) {
-		this.motivo = motivo;
-	}
-
+	
 	public String getData() {
 		return data;
 	}
 
 	public void setData(String data) {
 		this.data = data;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
+	}
+
+	public List<Avaliacao> getAvaliacaos() {
+		return avaliacaos;
+	}
+
+	public void setAvaliacaos(List<Avaliacao> avaliacaos) {
+		this.avaliacaos = avaliacaos;
 	}
 
 }
